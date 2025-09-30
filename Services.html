@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="icon" type="image/png" href="img/KAPOO LOGO-023 Blackขอบ.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+  
+  </style>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+  
+<!-- ปุ่ม GET IN TOUCH -->
+<div class="Getintouch-btn" onclick="openContactModal()">
+  GET IN TOUCH
+</div>
+ <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+      <div id="contact-modal" class="contact-modal">
+  <!-- Marquee 1 -->
+  <div class="modal-marquee modal-marquee-1">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+  <!-- Marquee 2 -->
+  <div class="modal-marquee modal-marquee-2">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+
+<div class="contact-modal-content">
+    <div class="contact-modal-close" onclick="closeContactModal()">✕</div>
+    <h2>START A PROJECT</h2>
+    <p>How can we contact you?</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your name*" required>
+      <input type="email" placeholder="Email*" required>
+      <textarea placeholder="Tell us more about your project…*" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- Success Popup -->
+    <div id="success-popup" class="success-popup">
+      <div class="success-popup-inner">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="24" fill="#4CAF50"/>
+          <path d="M14 25L21 32L34 19" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="success-popup-text">ส่งเรียบร้อยแล้ว!</div>
+      </div>
+    </div>
+</div>
+ 
+      
+    </header>
+  
+    <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="menu">
+  <div class="close-btn" onclick="toggleMenu(document.querySelector('.hamburger'))">✕</div>
+  <a href="work.html" 
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    WORK
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="Services.html" class="active"
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    SERVICES
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="about.html"
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    ABOUT
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+<a href="#" 
+   onmousemove="moveDuckTooltip(event, this)"
+   onmouseleave="hideDuckTooltip()"
+   onclick="openContactModal(); toggleMenu(document.querySelector('.hamburger')); return false;">
+  CONTACT
+  <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+</a>
+</div>
+
+
+
+<style>
+  .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 60vh;
+  background: #000;
+  color: #fff;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+.hero-text {
+  flex: 1 1 320px;
+  min-width: 250px;
+  max-width: 520px;
+  /* ป้องกันขยับ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.typing-text {
+  min-height: 56px; /* กำหนดความสูงขั้นต่ำเท่ากับข้อความยาวสุด */
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #F2C12E;
+  margin-bottom: 18px;
+  white-space: nowrap;
+}
+.hero-image img
+ {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  .hero-image, .hero-text {
+    max-width: 100%;
+  }
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.project-section {
+  background: #000000;
+  padding: 48px 0;
+  color: #fff;
+  font-family: 'Prompt', sans-serif;
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.project-media {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.media-box {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px #0007;
+  background: #222;
+  margin-top: 50px;
+}
+.project-tooltip {
+  margin-top: 18px;
+  background: #F2C12E;
+  color: #18191a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 12px #f2c12e33;
+}
+.project-info {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+}
+.project-category .pill-border {
+  display: inline-block;
+  border: 2px solid #F2C12E;
+  color: #F2C12E;
+  border-radius: 16px;
+  padding: 2px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: transparent;
+}
+.project-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.project-desc {
+  font-size: 1.1rem;
+  color: #eee;
+  margin-bottom: 10px;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-size: 1rem;
+}
+.project-tags span {
+  background: #222;
+  color: #F2C12E;
+  border-radius: 12px;
+  padding: 4px 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+@media (max-width: 900px) {
+  .project-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+  .project-media, .project-info {
+    max-width: 100%;
+  }
+}
+.tooltip-parent {
+  position: relative;
+  display: inline-block;
+}
+.project-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%) translateY(100%);
+  background: #F2C12E;
+  color: #18191a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 12px #f2c12e33;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .project-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    padding: 0 16px;
+  }
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const messages = ["SERVICE", "KAPOO PRODUCTION"];
+  const target = document.getElementById("SERVICE");
+
+  let msgIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentMsg = messages[msgIndex];
+
+    if (isDeleting) {
+      charIndex--;
+    } else {
+      charIndex++;
+    }
+
+    target.textContent = currentMsg.substring(0, charIndex);
+
+    if (!isDeleting && charIndex === currentMsg.length) {
+      setTimeout(() => {
+        isDeleting = true;
+        typeLoop();
+      }, 1700);
+      return;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      msgIndex = (msgIndex + 1) % messages.length;
+    }
+
+    const delay = isDeleting ? 60 : 100;
+    setTimeout(typeLoop, delay);
+  }
+
+  typeLoop();
+});
+</script>
+
+    <section class="hero">
+  <div class="hero-text">
+    <h1 id="SERVICE" class="typing-text"></h1>
+    <p>
+      Kapoo Production blends technology and creativity to shape the future of visual media.
+      Kapoo Production สตูดิโอสร้างสรรค์สายเทค ที่หลงใหลงาน 3D เกม และคอนเทนต์โลกเสมือน
+    </p>
+  </div>
+  <div class="hero-image">
+    <img src="img/QT0027-1-2.png" alt="Kapoo Character">
+    
+  </div>
+</section>
+<script></script>
+        <!-- Diagonal Marquee -->
+<!-- Marquee 1: เลื่อนซ้าย -->
+<section class="diagonal-marquee marquee-left">
+  <div class="marquee-track">
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<!-- Marquee 2: เลื่อนขวา -->
+<section class="diagonal-marquee marquee-right">
+  <div class="marquee-track">
+        <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+ <section class="project-section">
+  <!-- วางไว้ด้านบนของหน้า Services -->
+<div class="search-bar-container" style="text-align:right; margin: 24px 0 12px 0; padding: 40px; background: #000000; border-radius: 32px;">
+  <input type="text" id="searchInput" placeholder="ค้นหา..." style="padding:10px 16px; border-radius:24px; border:1px solid #F2C12E; background:#000000; color:#fff; font-size:1rem; width:220px; max-width:80vw; font-family: 'Prompt', sans-serif;">
+  <button onclick="searchSection()" style="padding:8px 18px; border-radius:24px; background:#F2C12E; color:#18191a; border:none; font-weight:bold; font-size:1rem; margin-left:8px; cursor:pointer; font-family: 'Prompt', sans-serif;">ค้นหา</button>
+</div>
+
+<script>
+function searchSection() {
+  const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (!keyword) return;
+
+  // ค้นหาเฉพาะชื่อโปรเจกต์ (project-title)
+  const titles = document.querySelectorAll('.project-title');
+  let found = false;
+  titles.forEach(title => {
+    if (title.textContent.toLowerCase().includes(keyword)) {
+      title.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      title.style.boxShadow = '0 0 0 4px #F2C12E';
+      title.style.background = '#18191a';
+      title.style.color = '#F2C12E';
+      setTimeout(() => {
+        title.style.boxShadow = '';
+        title.style.background = '';
+        title.style.color = '';
+      }, 1200);
+      found = true;
+    }
+  });
+  if (!found) {
+    let popup = document.createElement('div');
+    popup.className = 'search-popup';
+    popup.innerHTML = `
+      <div style="
+        background:#18191a;
+        color:#F2C12E;
+        padding:32px 24px;
+        border-radius:24px;
+        box-shadow:0 8px 40px #000a;
+        position:fixed;
+        top:50%;left:50%;
+        transform:translate(-50%,-50%);
+        z-index:9999;
+        font-size:1.3rem;
+        text-align:center;
+        min-width:240px;
+        max-width:90vw;
+      ">
+        ไม่พบข้อมูลที่ค้นหา<br>
+        <button style="margin-top:18px;padding:8px 24px;border-radius:16px;background:#F2C12E;color:#18191a;border:none;font-weight:bold;cursor:pointer;" onclick="this.parentElement.parentElement.remove()">ปิด</button>
+      </div>
+    `;
+    document.body.appendChild(popup);
+    setTimeout(() => {
+      if (popup.parentElement) popup.remove();
+    }, 2200);
+  }
+}
+</script>
+ 
+<script>
+function openImageModal(src) {
+  document.getElementById('modalImg').src = src;
+  document.getElementById('imageModal').style.display = 'flex';
+}
+function closeImageModal() {
+  document.getElementById('imageModal').style.display = 'none';
+  document.getElementById('modalImg').src = '';
+}
+document.getElementById('imageModal').addEventListener('click', function(e) {
+  if (e.target === this) closeImageModal();
+});
+</script>
+
+<div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.92);z-index:9999;justify-content:center;align-items:center;">
+  <span onclick="closeImageModal()" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;z-index:10001;">✕</span>
+  <img id="modalImg" src="" alt="ดูรูปใหญ่" style="max-width:90vw;max-height:80vh;border-radius:24px;box-shadow:0 8px 40px #000a;">
+</div>
+
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/8.jpg')">
+        <div class="media-box">
+  <img src="img/8.jpg" alt="GIF Animation" style="width:100%;">
+  <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->    
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border">3D SERVICE</span></div>
+      <div class="project-title">3D CHARACTER</div>
+      <div class="project-desc">
+        Transform your ideas into stunning 3D characters. We specialize in stylized and realistic designs for games, animation, VTubers, and more.<br>
+        PRICE : 20,000 - 40,000 THB
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span>
+        <span>Illustration</span> <span>Typography</span>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <section class="project-section">
+ <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/3.jpg')">
+        <div class="media-box">
+        <img src="img/3.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-title">3D VIDEO PRODUCTION </div>
+      <div class="project-desc">
+                3D On Booth Virtual Music Live Fes 2024  11 & 12 MAY 2024 Aisha Channel - Guardian Angel Ai Co., Ltd. <br>
+        3D Video for Promoting your product, Event, Game, Vtuber, Company, ETC. <br>
+ PRICE : 8,000 - 15,000 THB
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span>
+        <span>Illustration</span> <span>Typography</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-section">
+ <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+     <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/13.jpg')">
+        <div class="media-box">
+          <img src="img/13.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-title">3D CONCERT VTUBER</div>
+      <div class="project-desc">
+                Invincible Melody: Phase of Euphoria is Shxtou & Unnämed 1st 3D concert at Bangkok Thailand with live Meeting with fans In metaverse <br>
+PRICE : 400K - 1.5M THB [OFFLINE]
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span>
+        <span>Illustration</span> <span>Typography</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="project-section">
+ <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/15.jpg')">
+        <div class="media-box">
+        <img src="img/15.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-title">Virtual Reality | VR</div>
+      <div class="project-desc">
+                Invincible Melody: Phase of Euphoria is Shxtou & Unnämed 1st 3D concert at Bangkok Thailand with live Meeting with fans In metaverse <br>
+PRICE : 400K - 1.5M THB [OFFLINE]
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span>
+        <span>Illustration</span> <span>Typography</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/18.jpg')">
+        <div class="media-box">
+         <img src="img/18.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border">ARCADE GAME</span></div>
+      <div class="project-title">ARCADE GAME</div>
+      <div class="project-desc">
+        We are a Game developer too!! 
+Here is a Game For event that base on any theme event request This Example 3D Game from 
+<br> Event:  V-Meet By V-festa X True Prohub 5G<br> PRICE : 30,000 - 150,000 THB
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+    <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/22.jpg')">
+        <div class="media-box">
+         <img src="img/22.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border">VTUBER SERVICE</span></div>
+      <div class="project-title">Built-it : Vtuber 101</div>
+      <div class="project-desc">
+       “We Have a Personal Assistant To Advice your Vtuber”
+Start form Character Design until your Debut Stream 
+What To Do, What to Know, and Take care About your Business / Hobby on 2D Vtuber / 3D Vtuber 
+<br> PRICE : 5,000 - 10,000 THB
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/23.jpg')">
+        <div class="media-box">
+         <img src="img/23.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      
+      <div class="project-title">STREAMING ENVIRONMENT SYSTEM (SES)</div>
+      <div class="project-desc">
+       Chat Box | Donate | Overlays | Custom Fields
+<br> PRICE : 9,000 - 4,000 THB
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/29.jpg')">
+        <div class="media-box">
+         <img src="img/29.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border"> RENTAL </span></div>
+      <div class="project-title">VR / Mo-cap</div>
+      <div class="project-desc">  Full Body Tracking Vive Index
+      <br> “Full body Tracking to make your more joy with your game in full body and sport with
+smooth movement. 
+<br> Rent Per/day : 3,000 THB
+<br>
+<br> Motion Capture Suit Rokoko Suit 
+<br>“Motion Capture Suit for capture your movement and emotion to let your Avatar or Character smoother and Bring your model more lively."
+<br>Rent Per/day : 6,500 THB
+
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/31.jpg')">
+        <div class="media-box">
+         <img src="img/31.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border">Metaverse</span></div>
+      <div class="project-title">Metaverse VR Chat</div>
+      <div class="project-desc">
+       Metaverse VRChat Creations
+Festivals, Markets, Meetings <br>— we bring real-world experiences into VRChat with interactive and immersive designs.
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/33.jpg')">
+        <div class="media-box">
+         <img src="img/33.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+
+      <div class="project-title">3D Model | Scene</div>
+      <div class="project-desc">
+       Build Your World with Us!
+From lively festivals and modern architecture to relaxing resorts and rainy-night cabins — we create 3D scenes that transform ideas into immersive virtual spaces.
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr class="section-divider">
+
+<section class="project-section">
+  <div class="project-container">
+    <!-- ซ้าย: วิดีโอ/รูป -->
+    <div class="project-media">
+      <a href="javascript:void(0)" class="media-link" onclick="openImageModal('img/24.jpg')">
+        <div class="media-box">
+         <img src="img/24.jpg" alt="Project Image" style="width:100%;">
+        <div class="media-overlay">
+    <span class="media-zoom-icon">+</span>
+  </div>
+</div>
+      </a>
+      <div class="project-tooltip">
+        <span></span>
+      </div>
+    </div>
+    <!-- ขวา: ข้อความ -->
+    <div class="project-info">
+      <div class="project-category"><span class="pill-border">EXHIBITION BOOTH</span></div>
+      <div class="project-title">Event</div>
+      <div class="project-desc">
+       “We also a Exhibitor too!! "
+we can Booth with many IT exhibition: VR Game, VR MEETING, 
+GAME FOR EVENT, HOLOBOX OR Seminar at Educational institution
+      </div>
+      <div class="project-tags">
+        <span>Creative</span> <span>Strategy</span> <span>Identity</span> 
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Tooltip element -->
+
+<div id="tooltip-follow" class="tooltip"></div>
+        <!-- Diagonal Marquee -->
+<!-- Marquee 1: เลื่อนซ้าย -->
+<section class="diagonal-marquee marquee-left">
+  <div class="marquee-track">
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<!-- Marquee 2: เลื่อนขวา -->
+<section class="diagonal-marquee marquee-right">
+  <div class="marquee-track">
+        <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+ 
+</section>
+<footer class="footer" style="font-family: 'Prompt', sans-serif;">
+  <div class="footer-container">
+    <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+    <div class="footer-brand">
+      <h2>KAPOO PRODUCTION</h2>
+      <p>VR/AR | 3D Motion Capture | Animation | VTuber</p>
+    </div>
+    
+     <div class="footer-links">
+      <a href="work.html">Work</a>
+      <a href="Services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="#"
+   onclick="openContactModal(); return false;">
+  Contact
+</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/kapoopro" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/kapoo.production?utm_source=ig_web_button_share_sheet&igsh=MWIwajhtZjJpeWQ0aA==" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@kapoocafeofficial3019?si=hxncDWiOBieuJPuH" target="_blank">Youtube</a>
+      <a href="https://x.com/KapooProduction" target="_blank">X</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Kapoo Production. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("tooltip-follow");
+  const tooltipText = tooltip.querySelector("span");
+
+  document.querySelectorAll(".tooltip").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      tooltipText.textContent = item.getAttribute("data-title");
+      tooltip.classList.add("active");
+    });
+
+    item.addEventListener("mousemove", e => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY - 10 + "px";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      tooltip.classList.remove("active");
+      tooltipText.textContent = "";
+    });
+  });
+});
+
+</script>
+
+<script>
+  const blocks = document.querySelectorAll('.work-block');
+  blocks.forEach(block => {
+    block.addEventListener('click', () => {
+      blocks.forEach(b => b.classList.remove('active'));
+      block.classList.add('active');
+    });
+  });
+</script>
+
+ 
+     
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const messages = ["SERVICE","KAPOO PRODUCTION"];
+    const target = document.querySelector(".typing-text");
+
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      const currentMsg = messages[msgIndex];
+
+      // พิมพ์หรือทำการลบ
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      // อัปเดตข้อความ
+      target.textContent = currentMsg.substring(0, charIndex);
+
+      // ตรวจสอบเงื่อนไขเพื่อเปลี่ยนสถานะ
+      if (!isDeleting && charIndex === currentMsg.length) {
+        // พิมพ์ครบแล้ว รอแล้วเริ่มลบ
+        setTimeout(() => {
+          isDeleting = true;
+          typeLoop();
+        }, 1700);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        // ลบครบแล้ว เริ่มใหม่
+        isDeleting = false;
+        msgIndex = (msgIndex + 1) % messages.length;
+      }
+
+      // หน่วงเวลาแต่ละรอบ
+      const delay = isDeleting ? 60 : 100;
+      setTimeout(typeLoop, delay);
+    }
+
+    typeLoop();
+  });
+</script>
+
+
+  <script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+    document.getElementById("fullscreenMenu").classList.toggle("visible");
+  }
+
+  function closeMenu() {
+    document.querySelector(".hamburger").classList.remove("change");
+    document.getElementById("fullscreenMenu").classList.remove("visible");
+  }
+</script>
+  
+  <!-- Scroll Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const words = ["KAPOO PRODUCTION"];
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const el = document.querySelector(".decode-text");
+
+    let wordIndex = 0;
+    let frame = 0;
+
+    function randomChar() {
+      return chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    function decodeWord(word, callback) {
+      let iterations = 0;
+      const totalFrames = 10;
+      const output = Array(word.length).fill("");
+
+      const interval = setInterval(() => {
+        for (let i = 0; i < word.length; i++) {
+          if (iterations > i + 2) {
+            output[i] = word[i];
+          } else {
+            output[i] = randomChar();
+          }
+        }
+
+        el.textContent = output.join("");
+
+        iterations++;
+
+        if (iterations > word.length + totalFrames) {
+          clearInterval(interval);
+          if (callback) setTimeout(callback, 2000); // หน่วงก่อนคำถัดไป
+        }
+      },60); // ความเร็ว
+    }
+
+    function loopWords() {
+      decodeWord(words[wordIndex], () => {
+        wordIndex = (wordIndex + 1) % words.length;
+        loopWords();
+      });
+    }
+
+    loopWords();
+  });
+</script>
+<script>
+  function toggleMenu(hamburger) {
+    const menu = document.getElementById("menu");
+    hamburger.classList.toggle("change");
+    menu.classList.toggle("open");
+  }
+</script>
+
+<script>
+  function moveDuckTooltip(e, el) {
+  const img = el.querySelector('.menu-tooltip-img');
+  img.style.opacity = 1;
+  img.style.left = (e.clientX + 20) + 'px';
+  img.style.top = (e.clientY + 20) + 'px';
+}
+
+function hideDuckTooltip() {
+  document.querySelectorAll('.menu-tooltip-img').forEach(img => {
+    img.style.opacity = 0;
+  });
+}
+</script>
+
+<script>
+  function openContactModal() {
+  document.getElementById('contact-modal').classList.add('open');
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+}
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("success-popup");
+
+  if(form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      popup.classList.add("show");
+      setTimeout(() => {
+        popup.classList.remove("show");
+        closeContactModal();
+        form.reset();
+      }, 1800);
+    });
+  }
+});
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

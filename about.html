@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="icon" type="image/png" href="img/KAPOO LOGO-023 Blackขอบ.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+  
+  </style>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+  
+<!-- ปุ่ม GET IN TOUCH -->
+<div class="Getintouch-btn" onclick="openContactModal()">
+  GET IN TOUCH
+</div>
+ <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+      <div id="contact-modal" class="contact-modal">
+  <!-- Marquee 1 -->
+  <div class="modal-marquee modal-marquee-1">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+  <!-- Marquee 2 -->
+  <div class="modal-marquee modal-marquee-2">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+
+<div class="contact-modal-content">
+    <div class="contact-modal-close" onclick="closeContactModal()">✕</div>
+    <h2>START A PROJECT</h2>
+    <p>How can we contact you?</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your name*" required>
+      <input type="email" placeholder="Email*" required>
+      <textarea placeholder="Tell us more about your project…*" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- Success Popup -->
+    <div id="success-popup" class="success-popup">
+      <div class="success-popup-inner">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="24" fill="#4CAF50"/>
+          <path d="M14 25L21 32L34 19" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="success-popup-text">ส่งเรียบร้อยแล้ว!</div>
+      </div>
+    </div>
+</div>
+ 
+      
+    </header>
+  
+    <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="menu">
+  <div class="close-btn" onclick="toggleMenu(document.querySelector('.hamburger'))">✕</div>
+  <a href="work.html" 
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    WORK
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="Services.html" 
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    SERVICES
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="about.html" class="active"
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    ABOUT
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+<a href="#" 
+   onmousemove="moveDuckTooltip(event, this)"
+   onmouseleave="hideDuckTooltip()"
+   onclick="openContactModal(); toggleMenu(document.querySelector('.hamburger')); return false;">
+  CONTACT
+  <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+</a>
+</div>
+<style>
+.hero-fullbg {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px; /* ระยะจากขอบบน */
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 600px;   /* กำหนดขนาดสูงสุด */
+  margin-bottom: 5px; /* เว้นช่องว่างระหว่างวิดีโอและข้อความ */
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px #000a;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;  /* เลื่อนข้อความขึ้นมาทับบางส่วน */
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.hero-text .hero-title {
+  font-size: clamp(3rem, 4vw, 6rem); /* ใหญ่ขึ้น */
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.about-section {
+  background: #000000;
+  padding: 60px 5%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* แบ่งครึ่งจอ */
+  align-items: start;
+  gap: 40px;
+}
+
+/* ซ้าย */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.about-left p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* ขวา */
+.about-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr; /* มือถือให้เรียงแนวตั้ง */
+  }
+  .about-right {
+    margin-top: 30px;
+  }
+}
+.decor-section {
+  position: relative;    /* ให้วาง absolute ซ้อนด้านในได้ */
+  background: #000000;
+  padding: 50px 5%;
+  color: #fff;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.decor-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* ตำแหน่งแต่ละรูป */
+.decor-1 {
+  top: -40px;
+  left: 1px;
+  transform: rotate(-15deg);
+}
+
+.decor-2 {
+  top: 2px;
+  left: -90px;
+  transform: rotate(193deg);
+  scale: -90%;
+}
+
+
+.decor-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* รูปตกแต่ง */
+.decor-img {
+  position: absolute;
+  width: 180px;     /* ขนาดปกติ */
+  height: auto;
+  z-index: 0;       /* อยู่หลังข้อความ */
+  pointer-events: none; /* กันไม่ให้คลิกรูป */
+      /* ทำให้จางลงหน่อย */
+  
+}
+
+
+/* ข้อความ */
+#SERVICE .typing-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* ✅ แก้ปัญหามือถือ */
+@media (max-width: 768px) {
+  .decor-img {
+    width: 90px;       /* ย่อรูป */
+          /* ทำให้จางลงหน่อย */
+  }
+
+  .decor-1 {
+    top: -20px;
+    left: 10px;        /* ✅ ดึงไปชิดซ้ายสุด */
+  }
+
+  .decor-2 {
+    top: -30px;
+    right: 10px;       /* ✅ ดันไปชิดขวาแทน */
+    left: auto;        /* ยกเลิกค่า left เดิม */
+  }
+
+  #SERVICE .typing-text {
+    font-size: 2rem; /* ลดขนาดข้อความให้อ่านง่ายบนจอเล็ก */
+    text-align: center;
+  }
+}
+.text-section {
+  min-height: 1vh; /* ความสูงขั้นต่ำของ section */
+  background: #000; /* สีพื้นหลัง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2; /* ให้อยู่เหนือสติ๊กเกอร์ */
+  margin-top: -240px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.team-section {
+  background: #000000;
+  color: #fff;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.team-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.team-header p {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.team-card {
+  border-radius: 50px;  /* โค้งมนคล้ายแคปซูล */
+}
+
+.team-card img {
+  border-radius: 30px;  /* โค้งมนมากขึ้น */
+}
+
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 20px; /* ✅ ให้รูปก็มนตาม */
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 1.4rem;
+  margin: 0px 0 5px;
+}
+
+.team-card .role {
+  display: block;
+  font-size: 0.95rem;
+  color: #f7b500; /* สีเหลืองให้เด่น */
+  margin-bottom: 50px;
+}
+/* Tooltip เฉพาะทีม */
+.team-tooltip-follow {
+  position: fixed;
+  background: #F2C12E;
+  color: #000;
+  padding: 8px 14px;   /* ✅ ช่องว่างรอบข้อความ */
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -120%) scale(0.9);
+  z-index: 9999;
+  white-space: nowrap; /* ✅ บรรทัดเดียว ไม่ตัดบรรทัด */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 20px rgba(255, 170, 0, 0.25);
+
+  /* ✅ มนสวย แต่ยืดตามข้อความ */
+  border-radius: 24px;  
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.team-tooltip-follow.active {
+  opacity: 1;
+  transform: translate(-50%, -120%) scale(1);
+}
+
+.team-tooltip-follow span {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Fade-in ข้อความ */
+.team-tooltip-follow.active span {
+  opacity: 1;
+}
+
+
+/* ตำแหน่ง */
+.team-card span.role {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffcc00;
+  margin-top: 5px;
+  position: relative;
+  z-index: 2; /* ให้ชัวร์ว่าอยู่เหนือ tooltip */
+}
+
+.partner-section {
+  background: #000;
+  padding: 60px 5%;
+  text-align: center;
+}
+.partner-title {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+.splide__slide img {
+  max-height: 140px;   /* ✅ จากเดิม 80px → เพิ่มเป็น 140px */
+  margin: auto;
+  filter: grayscale(80%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  width: auto;  /* ให้กว้างอัตโนมัติตามอัตราส่วน */
+}
+
+.splide__slide img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ✅ บังคับ Splide ให้ชิดขอบซ้าย–ขวา */
+#partner-carousel .splide__track {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* ✅ ลบช่องว่างของ slide */
+#partner-carousel .splide__slide {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 1 0 auto; /* ให้กินพื้นที่เต็มตาม perPage */
+}
+
+/* ✅ รูปโลโก้ */
+#partner-carousel img {
+  width: 100%;       /* กว้างเต็ม slide */
+  height: auto;
+  max-height: 140px; /* กันไม่ให้สูงเกิน */
+  object-fit: contain;
+  display: block;
+}
+
+</style>
+
+
+<section class="hero-fullbg">
+  <div class="hero-video">
+    <video autoplay loop muted playsinline>
+      <source src="img/100-200.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="hero-text">
+    <h1 class="hero-title">KAPOO PRODUCTION</h1>
+    <p class="hero-subtitle">
+       Kapoo Production – The Duck Gen Co., Ltd. <br>
+Blending creativity and technology through <br> events, games, 3D, and digital innovation.
+         
+    </p>
+  </div>
+</section>
+
+
+        <!-- Diagonal Marquee -->
+<!-- Marquee 1: เลื่อนซ้าย -->
+<section class="diagonal-marquee marquee-left">
+  <div class="marquee-track">
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<!-- Marquee 2: เลื่อนขวา -->
+<section class="diagonal-marquee marquee-right">
+  <div class="marquee-track">
+        <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-container">
+    <!-- ซ้าย -->
+    <div class="about-left">
+      <h1 class="about-title">ABOUT US</h1>
+      <p>
+        Kapoo Production – The Duck Gen Co., Ltd.<br>
+We bring ideas to life through events, game-based activities, 3D animation, motion capture, 
+and digital media. Our passion is to create experiences that are fun, modern, and memorable, 
+connecting creativity with technology.
+      </p>
+      <p>
+        
+เราคือทีมที่ไม่ชอบอยู่นิ่ง เพราะเราสนุกกับการทำให้ไอเดียมัน “มีชีวิต”<br>
+ไม่ว่าจะเป็น อีเว้นท์มันส์ๆ เกมเพลินๆ หรือ 3D เท่ๆ เราอยากให้คุณได้เจอความว้าวในทุกงาน
+
+    </div>
+
+    <!-- ขวา -->
+    <div class="about-right">
+      <img src="img/518313673_24218106604451434_4877082101572271863_n.jpg" alt="About Image">
+    </div>
+  </div>
+  <section class="decor-section">
+  <div class="decor-content">
+  <!-- รูปตกแต่ง -->
+  <img src="img/kapoo stk.png" alt="sticker" class="decor-img decor-1">
+  <img src="img/kapoo duck.png" alt="sticker" class="decor-img decor-2">
+  <section id="team" class="team-section">
+  <div class="team-header">
+    <h2>MEET OUR TEAM</h2>
+    <p>ทีมงาน Kapoo Production ที่อยู่เบื้องหลังทุกความคิดสร้างสรรค์</p>
+  </div>
+
+  <div class="team-grid">
+    <!-- สมาชิก 1 -->
+    <div class="team-card">
+         <div class="team-photo team-tooltip" data-tooltip="ผู้นำด้านการออกแบบและสร้างสรรค์คอนเทนต์ดิจิทัล">
+        <img src="img/PK.png" alt="Member 1"></div>
+      <h3>Kittiwut Pholjun</h3>
+      <span class="role">CEO</span>
+    </div>
+<div id="team-tooltip-follow" class="team-tooltip-follow"><span></span></div>
+    <!-- สมาชิก 2 -->
+    <div class="team-card">
+      <div class="team-photo team-tooltip" data-tooltip="ผู้เชี่ยวชาญด้านเทคโนโลยีและนวัตกรรมดิจิทัล">
+      <img src="img/AJ.JPG" alt="Member 2"></div>
+      <h3>Sarit Boonjamrat</h3>
+      <span class="role">CTO</span>
+    </div>
+<div id="team-tooltip-follow" class="team-tooltip-follow"><span></span></div>
+    <!-- สมาชิก 3 -->
+    <div class="team-card">
+      <div class="team-photo team-tooltip" data-tooltip="นักพัฒนาเกมและประสบการณ์เสมือนจริง">
+      <img src="img/FD.JPG" alt="Member 3"></div>
+      <h3>Prakarn Srivilairit</h3>
+      <span class="role">Game Devalopment</span>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+  <section class="partner-section">
+  <h2 class="partner-title">PARTNERS</h2>
+  <div id="partner-carousel" class="splide" aria-label="Partner Logos">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="img/vibe.png" alt="Vibe"></li>
+        <li class="splide__slide"><img src="img/vfeta.png" alt="V-Festa"></li>
+        <li class="splide__slide"><img src="img/uphora.png" alt="Uphora"></li>
+        <li class="splide__slide"><img src="img/v won.png" alt="V Won"></li>
+        <li class="splide__slide"><img src="img/lyu.png" alt="LYU"></li>
+        <li class="splide__slide"><img src="img/otl.png" alt="OTL"></li>
+        <li class="splide__slide"><img src="img/spu.png" alt="SPU"></li>
+        <li class="splide__slide"><img src="img/thai japan.png" alt="Thai Japan"></li>
+        <li class="splide__slide"><img src="img/kid.png" alt="KID"></li>
+        <li class="splide__slide"><img src="img/lit49.png" alt="LIT49"></li>
+        <li class="splide__slide"><img src="img/yao.png" alt="YAO"></li>
+        <li class="splide__slide"><img src="img/bearer.png" alt="Bearer"></li>
+        <li class="splide__slide"><img src="img/ban.png" alt="BAN"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+</section>
+</section>
+</section>
+</section>
+
+
+<section id="SERVICE" class="text-section">
+  <div class="text-content">
+    <h2 class="section-title">OUR SERVICE</h2>
+    <p class="section-desc">
+      Kapoo Production blends technology and creativity <Br> to shape the future of visual media.
+    </p>
+  </div>
+</section>
+ <!-- Tooltip element -->
+
+ <div id="tooltip-follow" class="tooltip-follow"><span></span></div>
+
+<section class="c-work-block_list">
+    <div class="work-item">
+      <img src="img/3d 1.png" alt="Project 1" />
+    
+    </div>
+
+    <div class="work-item">
+      <img src="img/game 1.png" alt="Project 2" />
+      
+    </div>
+
+    <div class="work-item">
+      <img src="img/v1.png" alt="Project 3" />
+      
+    </div>
+
+    <div class="work-item">
+      <img src="img/B1.png" alt="Project 4" />
+      
+    </div>
+
+    <div class="work-item">
+      <img src="img/r1.png" alt="Project 5" />
+      
+    </div>
+  </section>
+  
+  
+  
+        <!-- Diagonal Marquee -->
+<!-- Marquee 1: เลื่อนซ้าย -->
+<section class="diagonal-marquee marquee-left">
+  <div class="marquee-track">
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<!-- Marquee 2: เลื่อนขวา -->
+<section class="diagonal-marquee marquee-right">
+  <div class="marquee-track">
+        <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+ 
+</section>
+<footer class="footer" style="font-family: 'Prompt', sans-serif;">
+  <div class="footer-container">
+    <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+    <div class="footer-brand">
+      <h2>KAPOO PRODUCTION</h2>
+      <p>VR/AR | 3D Motion Capture | Animation | VTuber</p>
+    </div>
+    
+    <div class="footer-links">
+      <a href="work.html">Work</a>
+      <a href="Services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="#"
+   onclick="openContactModal(); return false;">
+  Contact
+</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/kapoopro" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/kapoo.production?utm_source=ig_web_button_share_sheet&igsh=MWIwajhtZjJpeWQ0aA==" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@kapoocafeofficial3019?si=hxncDWiOBieuJPuH" target="_blank">Youtube</a>
+      <a href="https://x.com/KapooProduction" target="_blank">X</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Kapoo Production. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Splide core -->
+<!-- Splide Core -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+
+<!-- AutoScroll Extension -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#partner-carousel', {
+    type      : 'loop',
+    drag      : 'free',
+    focus     : 'left',   // ✅ ให้เริ่มชิดซ้าย
+    perPage   : 6,
+    gap       : '-7rem',
+    arrows    : false,
+    pagination: false,
+    autoScroll: {
+      speed: 1,  // ✅ ความเร็ว (1 = ช้า, 3 = เร็ว)
+    },
+    breakpoints: {
+      1400: { perPage: 5 },
+      1024: { perPage: 4 },
+      768:  { perPage: 3 },
+      480:  { perPage: 2 }
+    }
+  }).mount(window.splide.Extensions);
+});
+</script>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("team-tooltip-follow");
+  const tooltipText = tooltip.querySelector("span");
+
+  document.querySelectorAll(".team-tooltip").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      tooltipText.textContent = item.getAttribute("data-tooltip");
+      tooltip.classList.add("active");
+    });
+
+    item.addEventListener("mousemove", e => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY - 15 + "px";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      tooltip.classList.remove("active");
+      tooltipText.textContent = "";
+    });
+  });
+});
+
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("tooltip-follow");
+  const tooltipText = tooltip.querySelector("span");
+
+  document.querySelectorAll(".tooltip").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      tooltipText.textContent = item.getAttribute("data-title");
+      tooltip.classList.add("active");
+    });
+
+    item.addEventListener("mousemove", e => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY - 10 + "px";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      tooltip.classList.remove("active");
+      tooltipText.textContent = "";
+    });
+  });
+});
+
+</script>
+
+<script>
+  const blocks = document.querySelectorAll('.work-block');
+  blocks.forEach(block => {
+    block.addEventListener('click', () => {
+      blocks.forEach(b => b.classList.remove('active'));
+      block.classList.add('active');
+    });
+  });
+</script>
+
+ 
+     
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const messages = ["WHAT WE DO?","KAPOO PRODUCTION"];
+    const target = document.querySelector(".typing-text");
+
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      const currentMsg = messages[msgIndex];
+
+      // พิมพ์หรือทำการลบ
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      // อัปเดตข้อความ
+      target.textContent = currentMsg.substring(0, charIndex);
+
+      // ตรวจสอบเงื่อนไขเพื่อเปลี่ยนสถานะ
+      if (!isDeleting && charIndex === currentMsg.length) {
+        // พิมพ์ครบแล้ว รอแล้วเริ่มลบ
+        setTimeout(() => {
+          isDeleting = true;
+          typeLoop();
+        }, 1700);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        // ลบครบแล้ว เริ่มใหม่
+        isDeleting = false;
+        msgIndex = (msgIndex + 1) % messages.length;
+      }
+
+      // หน่วงเวลาแต่ละรอบ
+      const delay = isDeleting ? 60 : 100;
+      setTimeout(typeLoop, delay);
+    }
+
+    typeLoop();
+  });
+</script>
+
+
+  <script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+    document.getElementById("fullscreenMenu").classList.toggle("visible");
+  }
+
+  function closeMenu() {
+    document.querySelector(".hamburger").classList.remove("change");
+    document.getElementById("fullscreenMenu").classList.remove("visible");
+  }
+</script>
+  
+  <!-- Scroll Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const words = ["KAPOO PRODUCTION"];
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const el = document.querySelector(".decode-text");
+
+    let wordIndex = 0;
+    let frame = 0;
+
+    function randomChar() {
+      return chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    function decodeWord(word, callback) {
+      let iterations = 0;
+      const totalFrames = 10;
+      const output = Array(word.length).fill("");
+
+      const interval = setInterval(() => {
+        for (let i = 0; i < word.length; i++) {
+          if (iterations > i + 2) {
+            output[i] = word[i];
+          } else {
+            output[i] = randomChar();
+          }
+        }
+
+        el.textContent = output.join("");
+
+        iterations++;
+
+        if (iterations > word.length + totalFrames) {
+          clearInterval(interval);
+          if (callback) setTimeout(callback, 2000); // หน่วงก่อนคำถัดไป
+        }
+      },60); // ความเร็ว
+    }
+
+    function loopWords() {
+      decodeWord(words[wordIndex], () => {
+        wordIndex = (wordIndex + 1) % words.length;
+        loopWords();
+      });
+    }
+
+    loopWords();
+  });
+</script>
+<script>
+  function toggleMenu(hamburger) {
+    const menu = document.getElementById("menu");
+    hamburger.classList.toggle("change");
+    menu.classList.toggle("open");
+  }
+</script>
+
+<script>
+  function moveDuckTooltip(e, el) {
+  const img = el.querySelector('.menu-tooltip-img');
+  img.style.opacity = 1;
+  img.style.left = (e.clientX + 20) + 'px';
+  img.style.top = (e.clientY + 20) + 'px';
+}
+
+function hideDuckTooltip() {
+  document.querySelectorAll('.menu-tooltip-img').forEach(img => {
+    img.style.opacity = 0;
+  });
+}
+</script>
+
+<script>
+  function openContactModal() {
+  document.getElementById('contact-modal').classList.add('open');
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+}
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("success-popup");
+
+  if(form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      popup.classList.add("show");
+      setTimeout(() => {
+        popup.classList.remove("show");
+        closeContactModal();
+        form.reset();
+      }, 1800);
+    });
+  }
+});
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

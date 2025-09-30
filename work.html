@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work</title>
+  <link rel="icon" type="image/png" href="img/KAPOO LOGO-023 Blackขอบ.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+  
+  </style>
+</head>
+
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+  
+<!-- ปุ่ม GET IN TOUCH -->
+<div class="Getintouch-btn" onclick="openContactModal()">
+  GET IN TOUCH
+</div>
+ <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+      <div id="contact-modal" class="contact-modal">
+  <!-- Marquee 1 -->
+  <div class="modal-marquee modal-marquee-1">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+  <!-- Marquee 2 -->
+  <div class="modal-marquee modal-marquee-2">
+    <div class="modal-marquee-track">
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+      <img src="img/kapoo.png" alt="marquee" />
+    </div>
+  </div>
+
+<div class="contact-modal-content">
+    <div class="contact-modal-close" onclick="closeContactModal()">✕</div>
+    <h2>START A PROJECT</h2>
+    <p>How can we contact you?</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your name*" required>
+      <input type="email" placeholder="Email*" required>
+      <textarea placeholder="Tell us more about your project…*" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- Success Popup -->
+    <div id="success-popup" class="success-popup">
+      <div class="success-popup-inner">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="24" fill="#4CAF50"/>
+          <path d="M14 25L21 32L34 19" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="success-popup-text">ส่งเรียบร้อยแล้ว!</div>
+      </div>
+    </div>
+</div>
+ 
+      
+    </header>
+  
+    <!-- Fullscreen Menu -->
+  <div class="fullscreen-menu" id="menu">
+  <div class="close-btn" onclick="toggleMenu(document.querySelector('.hamburger'))">✕</div>
+  <a href="work.html" class="active"
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    WORK
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="Services.html" 
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    SERVICES
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+  <a href="about.html"
+     onmousemove="moveDuckTooltip(event, this)"
+     onmouseleave="hideDuckTooltip()"
+     onclick="toggleMenu(document.querySelector('.hamburger'))">
+    ABOUT
+    <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+  </a>
+<a href="#" 
+   onmousemove="moveDuckTooltip(event, this)"
+   onmouseleave="hideDuckTooltip()"
+   onclick="openContactModal(); toggleMenu(document.querySelector('.hamburger')); return false;">
+  CONTACT
+  <img class="menu-tooltip-img" src="img/duck.png" alt="duck" />
+</a>
+</div>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+ <style>
+  @media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    padding: 0 4vw;
+    max-width: 100vw;
+  }
+  .work-grid img {
+    border-radius: 10px;
+  }
+}
+/* ตัวละครอยู่หลังสุด */
+.work-character {
+  position: fixed;
+  bottom: -100px;
+  right: 0;
+  width: 600px;
+  max-width: 50vw;
+  height: auto;
+  z-index: 1;        /* ✅ อยู่หลัง grid และเส้นเหลือง */
+  opacity: 60%;
+  pointer-events: none;
+}
+
+/* Grid งาน */
+.work-grid {
+  position: relative;
+  z-index: 5;        /* ✅ อยู่เหนือรูปตัวละคร */
+}
+
+/* เส้นเหลือง Marquee */
+.diagonal-marquee {
+  position: relative;
+  z-index: 10;       /* ✅ อยู่เหนือทั้ง grid และตัวละคร */
+}
+footer {
+  position: relative;
+  z-index: 5;   /* ทุกอย่างอยู่เหนือ background */
+}
+
+ </style>
+ 
+
+ <section id="next-section" style="min-height: 100vh; background: #000; padding: 0px 0px;">
+  <h1 style="text-align:center; font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 40px; padding:50px;">WORK</h1>
+<div style="display: flex; justify-content: center;">
+ 
+
+    <div class="work-grid">
+      <a href="https://linktr.ee/kapz.vivinite" class="tooltip" data-title="KAPZ">
+  <img src="img/kp.png" alt="Project 1" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="100">
+</a>
+<a href="https://www.youtube.com/@Lynze_vvn" class="tooltip" data-title="LYNZE">
+  <img src="img/Lynze poster.png" alt="Project 2" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="500">
+</a>
+<a href="https://www.youtube.com/@Onlkz_vvn" class="tooltip" data-title="ONLIKISZZ">
+  <img src="img/ok.png" alt="Project 3" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="800">
+</a>
+<a href="https://www.facebook.com/share/p/1CgLK8S19a/" class="tooltip" data-title="VIVIANITE">
+  <img src="img/3D_All_VVN_2.png" alt="Project 4" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="1000">
+</a>
+<a href="https://youtu.be/NRPFthCaZKE?si=HDbSs5L4I-RsQCAx" class="tooltip" data-title="The TIMELINE EP.00 : Welcome to The Aetherion">
+  <img src="img/Artboard 1.png" alt="Project 5" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="1500">
+</a>
+<a href="https://youtu.be/g3wOP2TWSAo?si=5i25MiB5c52kLzBN" class="tooltip" data-title="【Original Song】 2 (MY) WORLD ┃ VIVIANITE">
+  <img src="img/welcome 2 my word.jpg" alt="Project 1" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="100">
+</a>
+<a href="https://www.facebook.com/share/p/17J9u6eJAE/" class="tooltip" data-title="6th Kapoo Production Anniversary | VR CHAT ">
+  <img src="img/kapoo 6 y.jpg" alt="Project 1" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="100">
+</a>
+<a href="https://youtu.be/CQCWvt-3e70?si=cof82l6G2hwLEv4I" class="tooltip" data-title="Sous Raccoon X Kapoo Production">
+  <img src="img/sous.png" alt="Project 1" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="100">
+</a>
+<a href="https://www.facebook.com/share/p/1HKbKdTfr6/" class="tooltip" data-title="Arcade Game">
+  <img src="img/Screenshot 2025-06-13 180930.png" alt="Project 2" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="500">
+</a>
+<a href="https://www.facebook.com/share/p/19wutBnBet/" class="tooltip" data-title="Game Interactive Holobox">
+  <img src="img/IMG_4570.JPG" alt="Project 3" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="800">
+</a>
+
+<a href="https://www.facebook.com/share/p/1MXKxy9SrQ/" class="tooltip" data-title="Invincible Melody: Phase of euphoria 
+Shxtou & Unnämed 1st 3D concert">
+  <img src="img/3d stae 2.jpg" alt="Project 3" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="800">
+</a>
+<a href="https://www.facebook.com/share/p/1BSFBmJzva/" class="tooltip" data-title="Untitled3DShowcase">
+  <img src="img/3d stae.jpg" alt="Project 3" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="800">
+</a>
+<a href="https://www.facebook.com/share/p/178ZRgEFe3/" class="tooltip" data-title="VR CHAT Songkran Festival 2024">
+  <img src="img/songkan.jpg" alt="Project 4" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="1000">
+</a>
+
+<a href="https://www.facebook.com/share/p/1C2E3BQySD/" class="tooltip" data-title="Workshop 3D Motion Capture by Kapoo
+Open House 2567 ">
+  <img src="img/open.jpg" alt="Project 5" style="width: 100%; border-radius: 16px" data-aos="zoom-in" data-aos-delay="1500">
+</a>
+    </div>
+  </div>
+ </div>
+ </div>
+      <img src="img/QT0027-3.png" alt="Character" class="work-character">
+ <!-- Tooltip element -->
+<div id="tooltip-follow" class="tooltip-follow"><span></span></div>
+
+        <!-- Diagonal Marquee -->
+<!-- Marquee 1: เลื่อนซ้าย -->
+<section class="diagonal-marquee marquee-left">
+  <div class="marquee-track">
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+
+<!-- Marquee 2: เลื่อนขวา -->
+<section class="diagonal-marquee marquee-right">
+  <div class="marquee-track">
+        <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+    <img src="img/kapoo.png" alt="marquee" />
+  </div>
+</section>
+ 
+</section>
+<footer class="footer" style="font-family: 'Prompt', sans-serif;">
+  <div class="footer-container">
+    <div class="logo">
+        <a href="index.html">
+          <img src="img/KAPOO_LOGO-02.png" alt="Kapoo Production Logo" />
+        </a>
+      </div>
+    <div class="footer-brand">
+      <h2>KAPOO PRODUCTION</h2>
+      <p>VR/AR | 3D Motion Capture | Animation | VTuber</p>
+    </div>
+    
+     <div class="footer-links">
+      <a href="work.html">Work</a>
+      <a href="Services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="#"
+   onclick="openContactModal(); return false;">
+  Contact
+</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/kapoopro" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/kapoo.production?utm_source=ig_web_button_share_sheet&igsh=MWIwajhtZjJpeWQ0aA==" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@kapoocafeofficial3019?si=hxncDWiOBieuJPuH" target="_blank">Youtube</a>
+      <a href="https://x.com/KapooProduction" target="_blank">X</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Kapoo Production. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("tooltip-follow");
+  const tooltipText = tooltip.querySelector("span");
+
+  document.querySelectorAll(".tooltip").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      tooltipText.textContent = item.getAttribute("data-title");
+      tooltip.classList.add("active");
+    });
+
+    item.addEventListener("mousemove", e => {
+      tooltip.style.left = e.clientX + 15 + "px";
+      tooltip.style.top = e.clientY - 10 + "px";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      tooltip.classList.remove("active");
+      tooltipText.textContent = "";
+    });
+  });
+});
+
+</script>
+
+<script>
+  const blocks = document.querySelectorAll('.work-block');
+  blocks.forEach(block => {
+    block.addEventListener('click', () => {
+      blocks.forEach(b => b.classList.remove('active'));
+      block.classList.add('active');
+    });
+  });
+</script>
+
+ 
+     
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const messages = ["WORK","KAPOO PRODUCTION"];
+    const target = document.querySelector(".typing-text");
+
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      const currentMsg = messages[msgIndex];
+
+      // พิมพ์หรือทำการลบ
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+
+      // อัปเดตข้อความ
+      target.textContent = currentMsg.substring(0, charIndex);
+
+      // ตรวจสอบเงื่อนไขเพื่อเปลี่ยนสถานะ
+      if (!isDeleting && charIndex === currentMsg.length) {
+        // พิมพ์ครบแล้ว รอแล้วเริ่มลบ
+        setTimeout(() => {
+          isDeleting = true;
+          typeLoop();
+        }, 1700);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        // ลบครบแล้ว เริ่มใหม่
+        isDeleting = false;
+        msgIndex = (msgIndex + 1) % messages.length;
+      }
+
+      // หน่วงเวลาแต่ละรอบ
+      const delay = isDeleting ? 60 : 100;
+      setTimeout(typeLoop, delay);
+    }
+
+    typeLoop();
+  });
+</script>
+
+
+  <script>
+  function toggleMenu(x) {
+    x.classList.toggle("change");
+    document.getElementById("fullscreenMenu").classList.toggle("visible");
+  }
+
+  function closeMenu() {
+    document.querySelector(".hamburger").classList.remove("change");
+    document.getElementById("fullscreenMenu").classList.remove("visible");
+  }
+</script>
+  
+  <!-- Scroll Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const words = ["KAPOO PRODUCTION"];
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const el = document.querySelector(".decode-text");
+
+    let wordIndex = 0;
+    let frame = 0;
+
+    function randomChar() {
+      return chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    function decodeWord(word, callback) {
+      let iterations = 0;
+      const totalFrames = 10;
+      const output = Array(word.length).fill("");
+
+      const interval = setInterval(() => {
+        for (let i = 0; i < word.length; i++) {
+          if (iterations > i + 2) {
+            output[i] = word[i];
+          } else {
+            output[i] = randomChar();
+          }
+        }
+
+        el.textContent = output.join("");
+
+        iterations++;
+
+        if (iterations > word.length + totalFrames) {
+          clearInterval(interval);
+          if (callback) setTimeout(callback, 2000); // หน่วงก่อนคำถัดไป
+        }
+      },60); // ความเร็ว
+    }
+
+    function loopWords() {
+      decodeWord(words[wordIndex], () => {
+        wordIndex = (wordIndex + 1) % words.length;
+        loopWords();
+      });
+    }
+
+    loopWords();
+  });
+</script>
+<script>
+  function toggleMenu(hamburger) {
+    const menu = document.getElementById("menu");
+    hamburger.classList.toggle("change");
+    menu.classList.toggle("open");
+  }
+</script>
+
+<script>
+  function moveDuckTooltip(e, el) {
+  const img = el.querySelector('.menu-tooltip-img');
+  img.style.opacity = 1;
+  img.style.left = (e.clientX + 20) + 'px';
+  img.style.top = (e.clientY + 20) + 'px';
+}
+
+function hideDuckTooltip() {
+  document.querySelectorAll('.menu-tooltip-img').forEach(img => {
+    img.style.opacity = 0;
+  });
+}
+</script>
+
+<script>
+  function openContactModal() {
+  document.getElementById('contact-modal').classList.add('open');
+}
+function closeContactModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+}
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("success-popup");
+
+  if(form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      popup.classList.add("show");
+      setTimeout(() => {
+        popup.classList.remove("show");
+        closeContactModal();
+        form.reset();
+      }, 1800);
+    });
+  }
+});
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
