@@ -1,18 +1,25 @@
 // firebase.js
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getFirestore, collection, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+// Import SDK
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, doc } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 
-// 🔑 config จาก Firebase Console ของคุณ
+// Config ของคุณ
 const firebaseConfig = {
-  apiKey: "AIzaSy...",
-  authDomain: "your-app.firebaseapp.com",
-  projectId: "your-app",
-  storageBucket: "your-app.appspot.com",
-  messagingSenderId: "1234567890",
-  appId: "1:1234567890:web:abcdefg"
+  apiKey: "AIzaSyBN4cFLnanSu1zeuqg51OYGuxqw8lnUi0w",
+  authDomain: "kapoo-production.firebaseapp.com",
+  projectId: "kapoo-production",
+  storageBucket: "kapoo-production.firebasestorage.app",
+  messagingSenderId: "1084825941072",
+  appId: "1:1084825941072:web:eda44ace40a799b4f70d55",
+  measurementId: "G-R0ZMKE6S57"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// ✅ Firestore DB
 export const db = getFirestore(app);
 
 // ✅ เพิ่มลูกค้า
