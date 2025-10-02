@@ -102,34 +102,28 @@
     </div>
   </div>
 </div>
-<!-- Firebase App (core) -->
-<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"></script>
-<!-- Firestore -->
-<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"></script>
+<!-- ✅ Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"></script>
 
-<!-- ✅ import firebase.js + form.js -->
-<script type="module" src="./form.js"></script>
+  <script>
+    // 🔹 Config ของคุณ
+    const firebaseConfig = {
+      apiKey: "AIzaSyBN4cFLnanSu1zeuqg51OYGuxqw8lnUi0w",
+      authDomain: "kapoo-production.firebaseapp.com",
+      projectId: "kapoo-production",
+      storageBucket: "kapoo-production.appspot.com",
+      messagingSenderId: "1084825941072",
+      appId: "1:1084825941072:web:eda44ace40a799b4f70d55",
+      measurementId: "G-R0ZMKE6S57"
+    };
 
-<script type="module">
-  // นำ config จาก Firebase console ของคุณมาใส่
-  const firebaseConfig = {
-    apiKey: "AIzaSyBN4cFLnanSu1zeuqg51OYGuxqw8lnUi0w",
-    authDomain: "kapoo-production.firebaseapp.com",
-    projectId: "kapoo-production",
-    storageBucket: "kapoo-production.appspot.com",
-    messagingSenderId: "1084825941072",
-    appId: "1:1084825941072:web:eda44ace40a799b4f70d55",
-    measurementId: "G-R0ZMKE6S57"
-  };
+    // 🔹 Init Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
 
-  // Init Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore(app);
-
-  // ✅ รอ DOM โหลดแล้วค่อย bind event
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-    form.addEventListener("submit", async (e) => {
+    // 🔹 Handle form submit
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const name = document.getElementById("name").value;
@@ -137,24 +131,21 @@
       const project = document.getElementById("project").value;
 
       try {
-        // เพิ่มข้อมูลเข้า collection Firestore
-        await db.collection("projectRequests").add({
+        await db.collection("Customers").add({
           name: name,
           email: email,
           project: project,
-          timestamp: new Date()
+          createdAt: new Date()
         });
 
-        alert("✅ ข้อมูลถูกบันทึกเรียบร้อยแล้ว!");
-        form.reset();
+        document.getElementById("success-popup").style.display = "block";
+        e.target.reset();
       } catch (err) {
-        console.error("❌ Error: ", err);
-        alert("เกิดข้อผิดพลาด ลองใหม่อีกครั้ง");
+        console.error("❌ Firestore Error:", err);
+        alert("เกิดข้อผิดพลาด: " + err.message);
       }
     });
-  });
-</script>
-
+  </script>
       
     </header>
   
