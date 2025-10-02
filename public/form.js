@@ -31,4 +31,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// ใช้ compat SDK ที่โหลดมาจาก <script src="...firebase-app-compat.js">
+// และ firestore-compat.js
+
+// Init Firestore
+const db = firebase.firestore();
+
+// Handle form submit
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const project = document.getElementById("project").value;
+
+    try {
+      await db.collection("Customers").add({
+        name,
+        email,
+        project,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      document.getElementById("success-popup").style.display = "block";
+      form.reset();
+    } catch (err) {
+      console.error("❌ Firestore Error:", err);
+      alert("เกิดข้อผิดพลาด: " + err.message);
+    }
+  });
+});
 
