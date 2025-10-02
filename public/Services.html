@@ -101,12 +101,12 @@
     </div>
   </div>
 </div>
-<!-- ✅ Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
+  <!-- ✅ Script สำหรับเชื่อม Firestore -->
   <script>
-    // 🔹 Config ของคุณ
+    // Config ของโปรเจกต์คุณ
     const firebaseConfig = {
       apiKey: "AIzaSyBN4cFLnanSu1zeuqg51OYGuxqw8lnUi0w",
       authDomain: "kapoo-production.firebaseapp.com",
@@ -117,11 +117,11 @@
       measurementId: "G-R0ZMKE6S57"
     };
 
-    // 🔹 Init Firebase
-    const app = firebase.initializeApp(firebaseConfig);
+    // Init Firebase
+    firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
-    // 🔹 Handle form submit
+    // Handle form submit
     document.getElementById("contactForm").addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -131,10 +131,10 @@
 
       try {
         await db.collection("Customers").add({
-          name: name,
-          email: email,
-          project: project,
-          createdAt: new Date()
+          name,
+          email,
+          project,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
 
         document.getElementById("success-popup").style.display = "block";
