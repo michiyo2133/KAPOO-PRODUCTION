@@ -100,7 +100,26 @@
       </div>
     </div>
 </div>
- 
+ <script type="module">
+  import { addCustomer, addProject } from "./firebase.js";
+
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const project = document.getElementById("project").value;
+
+    // 1) เพิ่มลูกค้า
+    const customerId = await addCustomer(name, email);
+
+    // 2) เพิ่มโปรเจกต์ที่เชื่อมกับลูกค้า
+    await addProject(customerId, project);
+
+    alert("✅ ส่งโปรเจกต์เรียบร้อยแล้ว!");
+    e.target.reset();
+  });
+</script>
       
     </header>
   
